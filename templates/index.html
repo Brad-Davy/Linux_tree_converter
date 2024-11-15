@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Flask App</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tree to Linux</h1>
+      <p>Enter your query below and hit Submit to get started!</p>
+      <div class="row">
+        <div class="column">
+            <form action="/submit" method="POST">
+                <input
+                  type="text"
+                  name="user_input"
+                  placeholder="Enter your input here..."
+                  required
+                />
+        </div>
+        <div class="column">
+            <form action="/submit" method="POST">
+                <input
+                  type="text"
+                  name="user_input"
+                  placeholder="Enter your input here..."
+                  required
+                />
+        </div>
+      </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
