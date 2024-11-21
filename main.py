@@ -35,7 +35,7 @@ class tree_formatter:
     def set_directory_names(self, names_array):
         names = []
         for i in names_array:
-            names.append(self.add_dash_before_under_score(i[-1]))
+            names.append(self._add_dash_before_under_score(i[-1]))
         self.directory_names = names
 
     def create_latex_file(self):
@@ -72,7 +72,7 @@ class tree_formatter:
             reduced_depth_levels.append(depth_levels.index(lines))
         return reduced_depth_levels
     
-    def add_dash_before_under_score(self, string):
+    def _add_dash_before_under_score(self, string):
             if '_' in string:
                 return string.replace('_', '\_')
             else:
