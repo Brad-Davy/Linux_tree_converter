@@ -65,7 +65,7 @@ class tree_formatter:
             f.write('    before computing xy={l=15pt},\n')
             f.write('  }\n')
 
-    def return_depth_levels(self):
+    def _return_depth_levels(self):
         depth_levels = sorted(np.unique(self.directory_depth))
         reduced_depth_levels = []
         for lines in self.directory_depth:
@@ -79,7 +79,7 @@ class tree_formatter:
                 return string
 
     def append_directory_structure(self):
-        depth_levels = self.return_depth_levels()
+        depth_levels = self._return_depth_levels()
 
         with open('tree.tex', 'a') as f:
             for idx,values in enumerate(depth_levels):
