@@ -11,13 +11,13 @@ class tree_formatter:
         with open('tree.tex', 'w') as f:
             f.write('')
 
-    def read_in_tree(self):
+    def _read_in_tree(self):
         with open(self.file_name, 'r') as f:
             tree = f.read()
         return tree
     
     def extract_file_names(self):
-        tree = self.read_in_tree()
+        tree = self._read_in_tree()
         tree = tree.split('\n')
         tree = [i for i in tree if i]
         tree = [i.split(' ') for i in tree]
